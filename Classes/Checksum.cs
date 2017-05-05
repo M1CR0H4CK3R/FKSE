@@ -22,23 +22,23 @@ namespace FKSE
                     for (int sub = 0; sub < 8; sub++)
                     {
                         int Sub_Offset = i + sub * 2; //Address + 2
-                        ushort Current_DWORD = (ushort)((Save_Buffer[Sub_Offset] << 8) + Save_Buffer[Sub_Offset + 1]); //GC Has Reverse Endianness (Big Endian)
+                        ushort Current_WORD = (ushort)((Save_Buffer[Sub_Offset] << 8) + Save_Buffer[Sub_Offset + 1]); //GC Has Reverse Endianness (Big Endian)
                         if (sub == 0)
                         {
                             //Step 3
-                            Y = Current_DWORD;
+                            Y = Current_WORD;
                             Counter += 8; //Step 4
                         }
                         else if (sub % 2 == 1)
                         {
                             //Steps 5 -> 6, 9 -> 10, 13 -> 14, 17 -> 18
-                            X = Current_DWORD;
+                            X = Current_WORD;
                             Checksum ^= Y;
                         }
                         else
                         {
                             //Steps 7 -> 8, 11 -> 12, 15 -> 16
-                            Y = Current_DWORD;
+                            Y = Current_WORD;
                             Checksum ^= X;
                         }
                     }
@@ -59,7 +59,7 @@ namespace FKSE
 
         public static void Update_Checksum(Save Save_File)
         {
-            Save_File.Write(Save_File.Save_Data_Start_Offset + 0x4240, Calculate_Checksum(Save_File.ReadByteArray(Save_File.Save_Data_Start_Offset + 0x4440, 0x1160)));
+            Save_File.Write(Save_File.Save_Data_Start_Offset + 0x4240, Calculate_Checksum(Save_File.ReadByteArray(Save_File.Save_Data_Start_Offset + 0x4440, 0x1160)), true);
         }
     }
 }
