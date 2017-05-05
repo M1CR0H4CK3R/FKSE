@@ -20,6 +20,7 @@ namespace FKSE
         public int ItemData;
         public int ItemDataSize;
         public int Money;
+        public int MoneySize;
         public int StoryData;
         public int StoryDataSize;
         public int MonsterData;
