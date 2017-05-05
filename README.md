@@ -4,9 +4,13 @@ FKSE - A Save Editor for the Nintendo GameCube game Yu-Gi-Oh! The Falsebound Kin
 Planned features:
 
 Money editing
+
 Items editing
+
 Monster stats editing
+
 Character stats editing
+
 Checksum recalculation
 
 Some code was taken from <a href="https://github.com/Cuyler36/ACSE">ACSE</a> by <a href="https://github.com/Cuyler36">Cuyler36</a> and
