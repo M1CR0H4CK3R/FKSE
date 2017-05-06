@@ -29,10 +29,11 @@ namespace FKSE
         public int CharacterDataSize;
     }
 
+    // These are offsets to the beginning of the save data. When you jump to the offset for each type, it should be the same data point
     public enum SaveFileDataOffset
     {
-        gyfegci = 0x4440,
-        gyfegcs = 0x4550
+        gyfegci = 0,
+        gyfegcs = 0x110
     }
 
     public static class SaveDataManager
@@ -50,8 +51,7 @@ namespace FKSE
 
         public static int GetSaveDataOffset(string Game_ID, string Extension)
         {
-            SaveFileDataOffset Extension_Enum;
-            if (Enum.TryParse(Game_ID + Extension, out Extension_Enum))
+            if (Enum.TryParse(Game_ID + Extension, out SaveFileDataOffset Extension_Enum))
                 return (int)Extension_Enum;
             return 0;
         }
@@ -74,6 +74,7 @@ namespace FKSE
     public class Save
     {
         public SaveType Save_Type;
+        public byte[] Original_Save_Data;
         public byte[] Working_Save_Data;
         public int[] Save_Offsets;
         public int Save_Data_Start_Offset;
@@ -115,6 +116,20 @@ namespace FKSE
                 Save_Extension = Path.GetExtension(File_Path);
                 Save_ID = SaveDataManager.GetGameID(Save_Type);
                 Save_Data_Start_Offset = SaveDataManager.GetSaveDataOffset(Save_ID.ToLower(), Save_Extension.Replace(".", "").ToLower());
+
+                Original_Save_Data = Save_Reader.ReadBytes((int)Save_File.Length);
+                Working_Save_Data = new byte[Original_Save_Data.Length];
+                Buffer.BlockCopy(Original_Save_Data, 0, Working_Save_Data, 0, Original_Save_Data.Length);
+
+                //FUNCTIONAL TEST OF CHECKSUM CALCULATOR (Remove at a later date)
+                ushort Saved_Checksum = ReadUInt16(Save_Data_Start_Offset + 0x4240, true);
+                ushort Calculated_Checksum = Checksum.Calculate_Checksum(Working_Save_Data.Skip(Save_Data_Start_Offset + 0x4440).Take(0x1160).ToArray());
+                if (Checksum.Verify_Checksum(this))
+                    MessageBox.Show("Checksum was valid!");
+                else
+                    MessageBox.Show("Checksum was invalid!");
+                MessageBox.Show(string.Format("Saved Checksum: {0} | Calculated Checksum: {1}", Saved_Checksum.ToString("X4"), Calculated_Checksum.ToString("X4")));
+                //END OF FUNCTIONAL TEST
 
                 Save_Reader.Close();
                 Save_File.Close();
