@@ -17,14 +17,14 @@ namespace FKSE
     {
         #region Offsets
         //TODO: Move this code out of this form and into its own class. (Also updated the rest to correct values)
-        public static int ItemData_Offset = 0x250;
+        public static int ItemData_Offset = 0x4490;
         public static int ItemData_Size = 0x400;
         public static int Money_Offset = 0x4690;
-        public static int StoryData_Offset = 0x454;
+        public static int StoryData_Offset = 0x469C;
         public static int StoryData_Size = 0xC;
-        public static int MonsterData_Offset = 0x460;
+        public static int MonsterData_Offset = 0x46A0;
         public static int MonsterData_Size = 0xDD4;
-        public static int CharacterData_Offset = 0x1234;
+        public static int CharacterData_Offset = 0x5474;
         public static int CharacterData_Size = 0x118;
         #endregion Offsets
 
@@ -38,6 +38,8 @@ namespace FKSE
         //private CharacterMonsterEditor charMonsterEditorForm;
         //private CancelEventHandler importHandler;
         private Save Save_File;
+        private Item[] Items = new Item[512];
+        private Monster[] Monsters = new Monster[177];
         #endregion Variables
 
         public static DateTime DateFromTimestamp(long timestamp)
@@ -60,6 +62,12 @@ namespace FKSE
                 Save_File = new Save(openFileDialog1.FileName);
                 //TODO: Implement reading method more elegantly
                 goldTextBox.Text = Save_File.ReadUInt32(Save_File.Save_Data_Start_Offset + Money_Offset, true).ToString();
+                // Item Loading
+                for (int i = 0; i < 512; i++)
+                    Items[i] = new Item(Save_File.ReadByte(ItemData_Offset + i), 0);
+                // Monster Loading
+                for (int i = 0; i < 177; i++)
+                    Monsters[i] = new Monster(Save_File.ReadByteArray(MonsterData_Offset + i * 0x14, 0x14));
             }
         }
 

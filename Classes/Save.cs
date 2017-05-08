@@ -6,6 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace FKSE
 {
@@ -222,6 +223,58 @@ namespace FKSE
             for (int i = 0; i < count; i++)
                 Returned_Values[i] = ReadUInt32(offset + i * 4, reversed);
             return Returned_Values;
+        }
+
+        // Static Objects Below
+        public static Dictionary<Type, Delegate> typeMap = new Dictionary<Type, Delegate>
+        {
+            {typeof(byte[]), new Func<byte[], byte>
+                (b => {
+                    return ConvertByte(new BitArray(b));
+                })
+            },
+            {typeof(BitArray), new Func<BitArray, byte>
+                (b => {
+                    return ConvertByte(b);
+                })
+            }
+        };
+
+        public static byte[] ToBits(byte Byte, bool Reverse = false)
+        {
+            byte[] Bits = new byte[8];
+            BitArray Bit_Array = new BitArray(new byte[] { Byte });
+            for (int x = 0; x < Bit_Array.Length; x++)
+                Bits[Reverse ? 7 - x : x] = Convert.ToByte(Bit_Array[x]);
+            return Bits;
+        }
+
+        public static byte ToBit(byte Bit_Byte, int Bit_Index, bool Reverse = false)
+        {
+            return (byte)((Reverse ? Bit_Byte >> (7 - Bit_Index) : Bit_Byte >> Bit_Index) & 1);
+        }
+
+        public static void SetBit(ref byte Bit_Byte, int Bit_Index, bool Set, bool Reverse = false)
+        {
+            int Mask = 1 << (Reverse ? 7 - Bit_Index : Bit_Index);
+            if (Set)
+                Bit_Byte = Bit_Byte |= (byte)Mask;
+            else
+                Bit_Byte = Bit_Byte &= (byte)~Mask;
+        }
+
+        public static byte ToByte(object Variant)
+        {
+            return (byte)typeMap[Variant.GetType()].DynamicInvoke(Variant);
+        }
+
+        private static byte ConvertByte(BitArray b)
+        {
+            byte value = 0;
+            for (byte i = 0; i < b.Count; i++)
+                if (b[i])
+                    value |= (byte)(1 << i);
+            return value;
         }
     }
 }
