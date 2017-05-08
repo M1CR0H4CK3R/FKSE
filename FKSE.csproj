@@ -91,6 +91,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Checksum.cs" />
+    <Compile Include="Classes\Item.cs" />
+    <Compile Include="Classes\Monster.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
