@@ -40,11 +40,11 @@ namespace FKSE
                 Flags[i] = Convert.ToBoolean(Flag_Bits[i]);
             Action_Points = monsterData[1];
             UNKNOWN = monsterData[2];
-            Orb_RGB = (uint)(monsterData[3] << 16 + monsterData[4] << 8 + monsterData[5]);
-            Max_HP = (ushort)(monsterData[6] << 8 + monsterData[7]);
+            Orb_RGB = (uint)((monsterData[3] << 16) + (monsterData[4] << 8) + monsterData[5]);
+            Max_HP = (ushort)((monsterData[6] << 8) + monsterData[7]);
             Base_Attack = (ushort)(monsterData[8] << 8 + monsterData[9]);
-            Base_Defense = (ushort)(monsterData[0xA] << 8 + monsterData[0xB]);
-            EXP = (ushort)(monsterData[0xC] << 8 + monsterData[0xD]);
+            Base_Defense = (ushort)((monsterData[0xA] << 8) + monsterData[0xB]);
+            EXP = (ushort)((monsterData[0xC] << 8) + monsterData[0xD]);
             Items = new Item[3];
             for (int i = 0; i < 3; i++)
                 Items[i] = new Item(monsterData[0xE + i * 2]);
