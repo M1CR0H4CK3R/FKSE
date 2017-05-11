@@ -15,7 +15,7 @@ namespace FKSE
     {
         Unknown,
         TFK_USA,
-        TFK_JAP,
+        TFK_JPN,
         TFK_PAL
     }
 
@@ -54,7 +54,7 @@ namespace FKSE
                 if (Game_ID == "GYFE")
                     return SaveType.TFK_USA;
                 else if (Game_ID == "GYFJ")
-                    return SaveType.TFK_JAP;
+                    return SaveType.TFK_JPN;
                 else if (Game_ID == "GYFP")
                     return SaveType.TFK_PAL;
             }
@@ -74,7 +74,7 @@ namespace FKSE
             {
                 case SaveType.TFK_USA:
                     return "GYFE";
-                case SaveType.TFK_JAP:
+                case SaveType.TFK_JPN:
                     return "GYFJ";
                 case SaveType.TFK_PAL:
                     return "GYFP";
