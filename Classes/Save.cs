@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Globalization;
 
 namespace FKSE
 {
@@ -69,9 +70,6 @@ namespace FKSE
         }
     }
 
-    //Note 1
-    //Note 2
-
     public class Save
     {
         public SaveType Save_Type;
@@ -121,16 +119,6 @@ namespace FKSE
                 Original_Save_Data = Save_Reader.ReadBytes((int)Save_File.Length);
                 Working_Save_Data = new byte[Original_Save_Data.Length];
                 Buffer.BlockCopy(Original_Save_Data, 0, Working_Save_Data, 0, Original_Save_Data.Length);
-
-                //FUNCTIONAL TEST OF CHECKSUM CALCULATOR (Remove at a later date)
-                ushort Saved_Checksum = ReadUInt16(Save_Data_Start_Offset + 0x4240, true);
-                ushort Calculated_Checksum = Checksum.Calculate_Checksum(Working_Save_Data.Skip(Save_Data_Start_Offset + 0x4440).Take(0x1160).ToArray());
-                if (Checksum.Verify_Checksum(this))
-                    MessageBox.Show("Checksum was valid!");
-                else
-                    MessageBox.Show("Checksum was invalid!");
-                MessageBox.Show(string.Format("Saved Checksum: {0} | Calculated Checksum: {1}", Saved_Checksum.ToString("X4"), Calculated_Checksum.ToString("X4")));
-                //END OF FUNCTIONAL TEST
 
                 Save_Reader.Close();
                 Save_File.Close();
@@ -237,6 +225,14 @@ namespace FKSE
                 (b => {
                     return ConvertByte(b);
                 })
+            },
+            {typeof(bool[]), new Func<bool[], byte>
+                (b => {
+                    byte[] Bit_Array = new byte[8];
+                    for (int i = 0; i < 4; i++)
+                        Bit_Array[i] = Convert.ToByte(b[i]);
+                    return ConvertByte(new BitArray(Bit_Array));
+                })
             }
         };
 
@@ -275,6 +271,42 @@ namespace FKSE
                 if (b[i])
                     value |= (byte)(1 << i);
             return value;
+        }
+
+        public static List<string> LoadItemDatabase(string Language = "en")
+        {
+            StreamReader Contents = null;
+            string DB_Location = MainForm.Assembly_Location + string.Format("\\Resources\\Items_{0}.txt", Language);
+            try { Contents = File.OpenText(DB_Location); }
+            catch { }
+            List<string> Items_List = new List<string>();
+            string Line;
+            while ((Line = Contents.ReadLine()) != null)
+            {
+                if (Line.Contains("0x"))
+                {
+                    Items_List.Add(Line.Substring(6));
+                }
+            }
+            return Items_List;
+        }
+
+        public static List<string> LoadMonsterDatabase(string Language = "en")
+        {
+            StreamReader Contents = null;
+            string DB_Location = MainForm.Assembly_Location + string.Format("\\Resources\\Monsters_{0}.txt", Language);
+            try { Contents = File.OpenText(DB_Location); }
+            catch { }
+            List<string> Monsters_List = new List<string>();
+            string Line;
+            while ((Line = Contents.ReadLine()) != null)
+            {
+                if (Line.Contains("0x"))
+                {
+                    Monsters_List.Add(Line.Substring(7));
+                }
+            }
+            return Monsters_List;
         }
     }
 }
