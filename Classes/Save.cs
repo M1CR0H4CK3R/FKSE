@@ -14,7 +14,9 @@ namespace FKSE
     public enum SaveType
     {
         Unknown,
-        TFK_USA
+        TFK_USA,
+        TFK_JAP,
+        TFK_PAL
     }
 
     public struct Offsets
@@ -35,7 +37,11 @@ namespace FKSE
     public enum SaveFileDataOffset
     {
         gyfegci = 0,
-        gyfegcs = 0x110
+        gyfegcs = 0x110,
+        gyfpgci = 0,
+        gyfpgcs = 0x110,
+        gyfjgci = 0,    //GYFJ Offsets are unconfirmed
+        gyfjgcs = 0x110
     }
 
     public static class SaveDataManager
@@ -47,6 +53,10 @@ namespace FKSE
                 string Game_ID = Encoding.ASCII.GetString(Save_Data, Save_Data.Length == 0x6150 ? 0x110 : 0, 4);
                 if (Game_ID == "GYFE")
                     return SaveType.TFK_USA;
+                else if (Game_ID == "GYFJ")
+                    return SaveType.TFK_JAP;
+                else if (Game_ID == "GYFP")
+                    return SaveType.TFK_PAL;
             }
             return SaveType.Unknown;
         }
@@ -64,6 +74,10 @@ namespace FKSE
             {
                 case SaveType.TFK_USA:
                     return "GYFE";
+                case SaveType.TFK_JAP:
+                    return "GYFJ";
+                case SaveType.TFK_PAL:
+                    return "GYFP";
                 default:
                     return "Unknown";
             }
@@ -107,7 +121,9 @@ namespace FKSE
 
                 Save_Reader = new BinaryReader(Save_File);
 
-                Working_Save_Data = new byte[Save_File.Length];
+                Original_Save_Data = Save_Reader.ReadBytes((int)Save_File.Length);
+                Working_Save_Data = new byte[Original_Save_Data.Length];
+                Buffer.BlockCopy(Original_Save_Data, 0, Working_Save_Data, 0, Original_Save_Data.Length);
 
                 Save_Type = SaveDataManager.GetSaveType(Working_Save_Data);
                 Save_Name = Path.GetFileNameWithoutExtension(File_Path);
@@ -115,10 +131,6 @@ namespace FKSE
                 Save_Extension = Path.GetExtension(File_Path);
                 Save_ID = SaveDataManager.GetGameID(Save_Type);
                 Save_Data_Start_Offset = SaveDataManager.GetSaveDataOffset(Save_ID.ToLower(), Save_Extension.Replace(".", "").ToLower());
-
-                Original_Save_Data = Save_Reader.ReadBytes((int)Save_File.Length);
-                Working_Save_Data = new byte[Original_Save_Data.Length];
-                Buffer.BlockCopy(Original_Save_Data, 0, Working_Save_Data, 0, Original_Save_Data.Length);
 
                 Save_Reader.Close();
                 Save_File.Close();
@@ -138,7 +150,7 @@ namespace FKSE
             Save_File.Close();
         }
 
-        public void Write(int offset, object data, bool reversed = false)
+        public void Write(int offset, dynamic data, bool reversed = false)
         {
             Type Data_Type = data.GetType();
             if (!Data_Type.IsArray)
@@ -147,7 +159,7 @@ namespace FKSE
                     Working_Save_Data[offset] = (byte)data;
                 else
                 {
-                    byte[] Byte_Array = BitConverter.GetBytes((dynamic)data);
+                    byte[] Byte_Array = BitConverter.GetBytes(data);
                     if (reversed)
                         Array.Reverse(Byte_Array);
                     Buffer.BlockCopy(Byte_Array, 0, Working_Save_Data, offset, Byte_Array.Length);
@@ -155,7 +167,7 @@ namespace FKSE
             }
             else
             {
-                dynamic Data_Array = (dynamic)data;
+                dynamic Data_Array = data;
                 if (Data_Type == typeof(byte[]))
                     for (int i = 0; i < Data_Array.Length; i++)
                         Working_Save_Data[offset + i] = Data_Array[i];

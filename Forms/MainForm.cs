@@ -96,6 +96,7 @@ namespace FKSE
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 Save_File = new Save(openFileDialog1.FileName);
+                Text = "FKSE - " + Save_File.Save_Name + string.Format(" - [{0}]", Save_File.Save_Type == SaveType.Unknown ? "Unknown" : Save_File.Save_Type.ToString().Substring(4));
                 //TODO: Implement reading method more elegantly
                 goldTextBox.Text = Save_File.ReadUInt32(Save_File.Save_Data_Start_Offset + Money_Offset, true).ToString();
 
