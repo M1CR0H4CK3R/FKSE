@@ -1,0 +1,177 @@
+0x000, Blue-Eyes White Dragon (Azrael)
+0x014, Seiyaryu
+0x028, Blue-Eyes Ultimate Dragon
+0x03C, Kaiser Dragon
+0x050, Blackland Fire Dragon
+0x064, Curse of Dragon
+0x078, Red-Eyes B. Dragon
+0x08C, B. Skull Dragon
+0x0A0, Serpent Night Dragon
+0x0B4, Meteor B. Dragon
+0x0C8, Crawling Dragon
+0x0DC, Meteor Dragon
+0x0F0, Baby Dragon
+0x104, Winged Dragon, Guardian of the Fortress #1
+0x118, Gaia the Dragon Champion
+0x12C, Thousand Dragon
+0x140, Parrot Dragon
+0x154, Harpie's Pet Dragon
+0x168, Mystical Elf
+0x17C, Time Wizard
+0x190, Rogue Doll
+0x1A4, Fairy's Gift
+0x1B8, Magician of Faith
+0x1CC, Saggi the Dark Clown
+0x1E0, Dark Magician
+0x1F4, Illusionist Faceless Mage
+0x208, Phantom Dewan
+0x21C, Skull Knight
+0x230, Cosmo Queen
+0x244, Magician of Black Chaos
+0x258, Dark Elf
+0x26C, Lord of D.
+0x280, Invitation to a Dark Sleep
+0x294, The Illusory Gentleman
+0x2A8, Dark Magician Girl
+0x2BC, Tao the Chanter
+0x2D0, Kazejin
+0x2E4, Aqua Madoor
+0x2F8, Shadow Specter
+0x30C, Zombie Warrior
+0x320, The Snake Hair
+0x334, Armored Zombie
+0x348, Dragon Zombie
+0x35C, Pumpking the King of Ghosts
+0x370, Shadow Ghoul
+0x384, Ghoul with an Appetite
+0x398, Giltia the D. Knight
+0x3AC, Black Luster Soldier
+0x3C0, Gate Guardian
+0x3D4, Swordstalker
+0x3E8, Flame Swordsman
+0x3FC, Swamp Battleguard
+0x410, Judge Man
+0x424, Gaia the Fierce Knight
+0x438, Celtic Guardian
+0x44C, Axe Raider
+0x460, Zanki
+0x474, Ansatsu
+0x488, Kanan the Swordmistress
+0x49C, Stuffed Animal
+0x4B0, Monster Tamer
+0x4C4, Swordsman from a Foreign Land
+0x4D8, Lava Battleguard
+0x4EC, Queen of Autumn Leaves
+0x500, Hitotsu-Me Giant
+0x514, Battle Ox
+0x528, Beaver Warrior
+0x53C, Mountain Warrior
+0x550, Tiger Axe
+0x564, Rabid Horseman
+0x578, Sengenjin
+0x58C, Panther Warrior
+0x5A0, Dark Rabbit
+0x5B4, Silver Fang
+0x5C8, Mystic Horseman
+0x5DC, Hane-Hane
+0x5F0, Gazelle the King of Mythical Beasts
+0x604, Chimera the Flying Mythical Beast
+0x618, Crimson Sunbird
+0x62C, Mavelus
+0x640, Wing Eagle
+0x654, Feral Imp
+0x668, Summoned Skull
+0x67C, Horn Imp
+0x690, Kuriboh
+0x6A4, Castle of Dark Illusions
+0x6B8, Reaper of the Cards
+0x6CC, King of Yamimakai
+0x6E0, Dark Chimera
+0x6F4, Dark King of the Abyss
+0x708, Midnight Fiend
+0x71C, Ryu-Kishin Powered
+0x730, Bickuribox
+0x744, Zoa
+0x758, Dragon Seeker
+0x76C, Neck Hunter
+0x780, Three-Headed Geedo
+0x794, Kryuel
+0x7A8, Gyakutenno Megami
+0x7BC, Orion the Battle King
+0x7D0, Dark Witch
+0x7E4, Dancing Elf
+0x7F8, Big Insect
+0x80C, Basic Insect
+0x820, Hercules Beetle
+0x834, Larvae Moth
+0x848, Perfectly Ultimate Great Moth
+0x85C, Dungeon Worm
+0x870, Man-Eater Bug
+0x884, Hunter Spider
+0x898, Two-Headed King Rex
+0x8AC, Megazowler
+0x8C0, Uraby
+0x8D4, Armored Lizard
+0x8E8, Enchanting Mermaid
+0x8FC, Fortress Whale
+0x910, Kairyu-Shin
+0x924, Aqua Dragon
+0x938, Sea King Dragon
+0x94C, Spike Seadra
+0x960, Labyrinth Tank
+0x974, Metalzoa
+0x988, Cyber Soldier
+0x99C, Cyber Commander
+0x9B0, Dharma Cannon
+0x9C4, Red-Eyes Black Metal Dragon
+0x9D8, Barrel Dragon
+0x9EC, Slot Machine
+0xA00, Launcher Spider
+0xA14, Robotic Knight
+0xA28, Machine King
+0xA3C, Giant Mech-Soldier
+0xA50, Cyber Saurus
+0xA64, Sanga of the Thunder
+0xA78, Thunder Dragon
+0xA8C, Twin-Headed Thunder Dragon
+0xAA0, Fiend Kraken
+0xAB4, Jellyfish
+0xAC8, Octoberser
+0xADC, Beastking of the Swamps
+0xAF0, Suijin
+0xB04, Water Girl
+0xB18, Giant Red Seasnake
+0xB2C, Kanikabuto
+0xB40, Zarigun
+0xB54, Penguin Soldier
+0xB68, Dragon Piper
+0xB7C, Flame Cerebrus
+0xB90, Giant Soldier of Stone
+0xBA4, Millenium Golem
+0xBB8, Dark Plant
+0xBCC, Garoozis
+0xBE0, Moisture Creature
+0xBF4, Jinzo
+0xC08, Alpha The Magnet Warrior
+0xC1C, Beta The Magnet Warrior
+0xC30, Gamma The Magnet Warrior
+0xC44, Insect Queen
+0xC58, Dunames Dark Witch
+0xC6C, Buster Blader
+0xC80, Valkyrion the Magna Warrior
+0xC94, Obelisk the Tormentor
+0xCA8, Slifer the Sky Dragon
+0xCBC, The Winged Dragon of Ra
+0xCD0, Beast of Gilfer
+0xCE4, Embodiment of Apophis
+0xCF8, Mystical Beast Serket
+0xD0C, Harpie Lady (Airo)
+0xD20, Harpie Lady (Ocupete)
+0xD34, Harpie Lady (Keraino)
+0xD48, Gemini Elf (Kachua)
+0xD5C, Gemini Elf (Lora)
+0xD70, Blue-Eyes White Dragon (Ibris)
+0xD84, Blue-Eyes White Dragon (Djibril)
+0xD98, Rocket Warrior
+0xDAC, Dark Magician #2
+0xDC0, Berfomet

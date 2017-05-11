@@ -1,0 +1,59 @@
+0x00, Legendary Sword
+0x01, Dark Energy
+0x02, Beast Fangs
+0x03, Laser Cannon Armor
+0x04, Silver Bow and Arrow
+0x05, Dragon Treasure
+0x06, Cyber Shield
+0x07, Violet Crystal
+0x08, Book of Secret Arts
+0x09, Black Pendant
+0x0A, Chaos Blaze
+0x0B, Solar Shine
+0x0C, Bless of Moonlight
+0x0D, Power of Nature
+0x0E, Dragon Capture Jar
+0x0F, Raimei
+0x10, Raigeki
+0x11, Blue Medicine
+0x12, Red Medicine
+0x13, Goblin's Secret Remedy
+0x14, Sparks
+0x15, Hinotama
+0x16, Final Flame
+0x17, Swords of Revealing Light
+0x18, Spellbinding Circle
+0x19, Metalmorph
+0x1A, Black Luster Ritual
+0x1B, Monster Reborn
+0x1C, Yami
+0x1D, Magic Jammer
+0x1E, Black Shield
+0x1F, Call of the Grave
+0x20, Gift of the Mystical Elf
+0x21, Dian Keto the Cure Master
+0x22, Sword of Dragon's Soul
+0x23, Enchanted Javelin
+0x24, Shadow Spell
+0x25, Mesmeric Control
+0x26, Gravity Bind
+0x27, Mirror Force
+0x28, Mirror Wall
+0x29, Quick Attack
+0x2A, Polymerization
+0x2B, Riryoku
+0x2C, Dragonic Attack
+0x2D, Super Rejuvenation
+0x2E, Snake Fang
+0x2F, Dragonic Fury
+0x30, Deal of Phantom
+0x31, Destruction Punch
+0x32, Electro-Whip
+0x33, Mage Power
+0x34, Germ Infection
+0x35, Multiply
+0x36, Slifer's Orb
+0x37, Soul of Obelisk
+0x38, Eye of Ra
+0x39, Shock Shell
+0xFF, Empty
