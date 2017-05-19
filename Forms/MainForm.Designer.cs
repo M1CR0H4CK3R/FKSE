@@ -46,6 +46,8 @@
             this.itemPageLabel = new System.Windows.Forms.Label();
             this.monstersTab = new System.Windows.Forms.TabPage();
             this.monsterEditorPanel = new System.Windows.Forms.Panel();
+            this.monsterAssignable = new System.Windows.Forms.CheckBox();
+            this.monsterOwned = new System.Windows.Forms.CheckBox();
             this.monsterEXP = new System.Windows.Forms.TextBox();
             this.monsterDefence = new System.Windows.Forms.TextBox();
             this.monsterAttack = new System.Windows.Forms.TextBox();
@@ -61,8 +63,13 @@
             this.monsterNext = new System.Windows.Forms.Button();
             this.monsterPageLabel = new System.Windows.Forms.Label();
             this.monsterTip = new System.Windows.Forms.ToolTip(this.components);
-            this.monsterOwned = new System.Windows.Forms.CheckBox();
-            this.monsterAssignable = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.monsterItem1 = new System.Windows.Forms.ComboBox();
+            this.monsterItemQuantity1 = new System.Windows.Forms.TextBox();
+            this.monsterItemQuantity2 = new System.Windows.Forms.TextBox();
+            this.monsterItem2 = new System.Windows.Forms.ComboBox();
+            this.monsterItemQuantity3 = new System.Windows.Forms.TextBox();
+            this.monsterItem3 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.generalTab.SuspendLayout();
@@ -222,6 +229,13 @@
             // 
             // monsterEditorPanel
             // 
+            this.monsterEditorPanel.Controls.Add(this.monsterItemQuantity3);
+            this.monsterEditorPanel.Controls.Add(this.monsterItem3);
+            this.monsterEditorPanel.Controls.Add(this.monsterItemQuantity2);
+            this.monsterEditorPanel.Controls.Add(this.monsterItem2);
+            this.monsterEditorPanel.Controls.Add(this.monsterItemQuantity1);
+            this.monsterEditorPanel.Controls.Add(this.monsterItem1);
+            this.monsterEditorPanel.Controls.Add(this.label2);
             this.monsterEditorPanel.Controls.Add(this.monsterAssignable);
             this.monsterEditorPanel.Controls.Add(this.monsterOwned);
             this.monsterEditorPanel.Controls.Add(this.monsterEXP);
@@ -239,6 +253,30 @@
             this.monsterEditorPanel.Name = "monsterEditorPanel";
             this.monsterEditorPanel.Size = new System.Drawing.Size(200, 395);
             this.monsterEditorPanel.TabIndex = 6;
+            // 
+            // monsterAssignable
+            // 
+            this.monsterAssignable.AutoSize = true;
+            this.monsterAssignable.Location = new System.Drawing.Point(105, 201);
+            this.monsterAssignable.Name = "monsterAssignable";
+            this.monsterAssignable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.monsterAssignable.Size = new System.Drawing.Size(80, 17);
+            this.monsterAssignable.TabIndex = 12;
+            this.monsterAssignable.Text = ":Assignable";
+            this.monsterAssignable.UseVisualStyleBackColor = true;
+            this.monsterAssignable.CheckedChanged += new System.EventHandler(this.monsterAssignable_CheckedChanged);
+            // 
+            // monsterOwned
+            // 
+            this.monsterOwned.AutoSize = true;
+            this.monsterOwned.Location = new System.Drawing.Point(6, 201);
+            this.monsterOwned.Name = "monsterOwned";
+            this.monsterOwned.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.monsterOwned.Size = new System.Drawing.Size(63, 17);
+            this.monsterOwned.TabIndex = 11;
+            this.monsterOwned.Text = ":Owned";
+            this.monsterOwned.UseVisualStyleBackColor = true;
+            this.monsterOwned.CheckedChanged += new System.EventHandler(this.monsterOwned_CheckedChanged);
             // 
             // monsterEXP
             // 
@@ -374,29 +412,59 @@
             this.monsterPageLabel.TabIndex = 3;
             this.monsterPageLabel.Text = "Page 1/15";
             // 
-            // monsterOwned
+            // label2
             // 
-            this.monsterOwned.AutoSize = true;
-            this.monsterOwned.Location = new System.Drawing.Point(6, 201);
-            this.monsterOwned.Name = "monsterOwned";
-            this.monsterOwned.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.monsterOwned.Size = new System.Drawing.Size(63, 17);
-            this.monsterOwned.TabIndex = 11;
-            this.monsterOwned.Text = ":Owned";
-            this.monsterOwned.UseVisualStyleBackColor = true;
-            this.monsterOwned.CheckedChanged += new System.EventHandler(this.monsterOwned_CheckedChanged);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Items";
             // 
-            // monsterAssignable
+            // monsterItem1
             // 
-            this.monsterAssignable.AutoSize = true;
-            this.monsterAssignable.Location = new System.Drawing.Point(105, 201);
-            this.monsterAssignable.Name = "monsterAssignable";
-            this.monsterAssignable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.monsterAssignable.Size = new System.Drawing.Size(80, 17);
-            this.monsterAssignable.TabIndex = 12;
-            this.monsterAssignable.Text = ":Assignable";
-            this.monsterAssignable.UseVisualStyleBackColor = true;
-            this.monsterAssignable.CheckedChanged += new System.EventHandler(this.monsterAssignable_CheckedChanged);
+            this.monsterItem1.FormattingEnabled = true;
+            this.monsterItem1.Location = new System.Drawing.Point(28, 256);
+            this.monsterItem1.Name = "monsterItem1";
+            this.monsterItem1.Size = new System.Drawing.Size(121, 21);
+            this.monsterItem1.TabIndex = 14;
+            // 
+            // monsterItemQuantity1
+            // 
+            this.monsterItemQuantity1.Location = new System.Drawing.Point(155, 256);
+            this.monsterItemQuantity1.Name = "monsterItemQuantity1";
+            this.monsterItemQuantity1.Size = new System.Drawing.Size(30, 20);
+            this.monsterItemQuantity1.TabIndex = 15;
+            // 
+            // monsterItemQuantity2
+            // 
+            this.monsterItemQuantity2.Location = new System.Drawing.Point(155, 282);
+            this.monsterItemQuantity2.Name = "monsterItemQuantity2";
+            this.monsterItemQuantity2.Size = new System.Drawing.Size(30, 20);
+            this.monsterItemQuantity2.TabIndex = 17;
+            // 
+            // monsterItem2
+            // 
+            this.monsterItem2.FormattingEnabled = true;
+            this.monsterItem2.Location = new System.Drawing.Point(28, 282);
+            this.monsterItem2.Name = "monsterItem2";
+            this.monsterItem2.Size = new System.Drawing.Size(121, 21);
+            this.monsterItem2.TabIndex = 16;
+            // 
+            // monsterItemQuantity3
+            // 
+            this.monsterItemQuantity3.Location = new System.Drawing.Point(155, 308);
+            this.monsterItemQuantity3.Name = "monsterItemQuantity3";
+            this.monsterItemQuantity3.Size = new System.Drawing.Size(30, 20);
+            this.monsterItemQuantity3.TabIndex = 19;
+            // 
+            // monsterItem3
+            // 
+            this.monsterItem3.FormattingEnabled = true;
+            this.monsterItem3.Location = new System.Drawing.Point(28, 308);
+            this.monsterItem3.Name = "monsterItem3";
+            this.monsterItem3.Size = new System.Drawing.Size(121, 21);
+            this.monsterItem3.TabIndex = 18;
             // 
             // MainForm
             // 
@@ -463,6 +531,13 @@
         private System.Windows.Forms.TextBox monsterAttack;
         private System.Windows.Forms.CheckBox monsterAssignable;
         private System.Windows.Forms.CheckBox monsterOwned;
+        private System.Windows.Forms.TextBox monsterItemQuantity3;
+        private System.Windows.Forms.ComboBox monsterItem3;
+        private System.Windows.Forms.TextBox monsterItemQuantity2;
+        private System.Windows.Forms.ComboBox monsterItem2;
+        private System.Windows.Forms.TextBox monsterItemQuantity1;
+        private System.Windows.Forms.ComboBox monsterItem1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

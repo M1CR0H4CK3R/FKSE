@@ -39,6 +39,8 @@ namespace FKSE
         private string[] Item_Database = Save.LoadItemDatabase().ToArray();
         private string[] Monster_Database = Save.LoadMonsterDatabase().ToArray();
         private ComboBox[] Item_ComboBoxes = new ComboBox[64];
+        private ComboBox[] Monster_Item_ComboBoxes = new ComboBox[3];
+        private TextBox[] Monster_Item_TextBoxes = new TextBox[3];
         private PictureBox[] Monster_PictureBoxes = new PictureBox[12];
         private int Item_ComboBox_Count = 64;
         private int Monster_PictureBox_Count = 12;
@@ -59,6 +61,15 @@ namespace FKSE
             InitializeComponent();
             Generate_Item_ComboBoxes();
             Generate_Monster_PictureBoxes();
+            Monster_Item_ComboBoxes = new ComboBox[3] { monsterItem1, monsterItem2, monsterItem3 };
+            Monster_Item_TextBoxes = new TextBox[3] { monsterItemQuantity1, monsterItemQuantity2, monsterItemQuantity3 };
+
+            for (int i = 0; i < 3; i++)
+            {
+                Monster_Item_ComboBoxes[i].Items.AddRange(Item_Database);
+                Monster_Item_ComboBoxes[i].SelectedIndexChanged += new EventHandler(Monster_Item_Selected_Index_Changed);
+                Monster_Item_TextBoxes[i].TextChanged += new EventHandler(Monster_Item_Quantity_Text_Changed);
+            }
         }
 
         private Image Get_Monster_Icon(int Monster_Index)
@@ -143,6 +154,30 @@ namespace FKSE
             }
         }
 
+        private void Monster_Item_Selected_Index_Changed(object sender, EventArgs e)
+        {
+            ComboBox Item_Box = sender as ComboBox;
+            if (Save_File != null && Current_Monster != null && Item_Box.SelectedIndex > -1)
+            {
+                int Item_Idx = Array.IndexOf(Monster_Item_ComboBoxes, Item_Box);
+                Current_Monster.Items[Item_Idx].Item_ID = Item_Box.SelectedIndex == 0x3A ? (byte)0xFF : (byte)Item_Box.SelectedIndex;
+            }
+        }
+
+        private void Monster_Item_Quantity_Text_Changed(object sender, EventArgs e)
+        {
+            TextBox Item_Box = sender as TextBox;
+            int Item_Idx = Array.IndexOf(Monster_Item_TextBoxes, Item_Box);
+            if (Save_File != null && Current_Monster != null && byte.TryParse(Item_Box.Text, out byte New_Quantity))
+            {
+                Current_Monster.Items[Item_Idx].Quantity = New_Quantity;
+            }
+            else if (Current_Monster != null && !string.IsNullOrEmpty(Item_Box.Text))
+            {
+                Item_Box.Text = Current_Monster.Items[Item_Idx].Quantity.ToString();
+            }
+        }
+
         private void Monster_Click(object sender, EventArgs e)
         {
             if (Save_File != null)
@@ -159,6 +194,13 @@ namespace FKSE
                 monsterEXP.Text = Clicked_Monster.EXP.ToString();
                 monsterOwned.Checked = Clicked_Monster.Flags[2];
                 monsterAssignable.Checked = Clicked_Monster.Flags[3];
+
+                for (int i = 0; i < 3; i++)
+                {
+                    Monster_Item_ComboBoxes[i].SelectedIndex = Clicked_Monster.Items[i].Item_ID == 0xFF ? 0x3A : Clicked_Monster.Items[i].Item_ID;
+                    Monster_Item_TextBoxes[i].Text = Clicked_Monster.Items[i].Quantity.ToString();
+                }
+
             }
         }
 
