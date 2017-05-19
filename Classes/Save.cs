@@ -46,6 +46,7 @@ namespace FKSE
 
     public static class SaveDataManager
     {
+
         public static SaveType GetSaveType(byte[] Save_Data)
         {
             if (Save_Data.Length == 0x6040 || Save_Data.Length == 0x6150)
@@ -61,9 +62,11 @@ namespace FKSE
             return SaveType.Unknown;
         }
 
+
         public static int GetSaveDataOffset(string Game_ID, string Extension)
         {
-            if (Enum.TryParse(Game_ID + Extension, out SaveFileDataOffset Extension_Enum))
+            SaveFileDataOffset Extension_Enum;
+            if (Enum.TryParse(Game_ID + Extension, out Extension_Enum))
                 return (int)Extension_Enum;
             return 0;
         }
