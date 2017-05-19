@@ -132,186 +132,541 @@
     <Content Include="Resources\Main_Icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Monster Portraits\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\100.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\101.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\102.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\103.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\104.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\105.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\106.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\107.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\108.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\109.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\110.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\111.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\112.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\113.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\114.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\115.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\116.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\117.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\118.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\119.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\12.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\120.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\121.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\122.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\123.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\124.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\125.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\126.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\127.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\128.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\129.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\13.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\130.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\131.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\132.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\133.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\134.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\135.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\136.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\137.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\138.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\139.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\14.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\140.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\141.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\142.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\143.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\144.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\145.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\146.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\147.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\148.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\149.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\15.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\150.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\151.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\152.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\153.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\154.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\155.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\156.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\157.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\158.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\159.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\160.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\161.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\162.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\163.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\164.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\165.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\166.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\167.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\168.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\169.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\17.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\170.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\171.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\172.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\173.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\174.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\175.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\176.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\18.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\19.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\21.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\22.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\23.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\25.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\26.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\27.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\28.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\30.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\31.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\33.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\35.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\36.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\37.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\38.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\39.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\40.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\41.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\42.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\43.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\44.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\46.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\47.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\49.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\51.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\52.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\53.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\54.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\55.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\56.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\57.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\58.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\59.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\60.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\61.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\62.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\63.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\65.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\66.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\67.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\68.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\69.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\70.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\71.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\72.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\73.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\74.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\75.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\76.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\77.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\78.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\79.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\80.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\81.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\82.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\83.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\84.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\85.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\86.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\87.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\88.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\89.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\91.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\92.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\93.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\94.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\95.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\96.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\97.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\98.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Monster Portraits\99.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Monsters_en.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\portraits\0.png" />
-    <Content Include="Resources\portraits\1.png" />
-    <Content Include="Resources\portraits\10.png" />
-    <Content Include="Resources\portraits\100.png" />
-    <Content Include="Resources\portraits\101.png" />
-    <Content Include="Resources\portraits\102.png" />
-    <Content Include="Resources\portraits\103.png" />
-    <Content Include="Resources\portraits\104.png" />
-    <Content Include="Resources\portraits\105.png" />
-    <Content Include="Resources\portraits\106.png" />
-    <Content Include="Resources\portraits\107.png" />
-    <Content Include="Resources\portraits\108.png" />
-    <Content Include="Resources\portraits\109.png" />
-    <Content Include="Resources\portraits\11.png" />
-    <Content Include="Resources\portraits\110.png" />
-    <Content Include="Resources\portraits\111.png" />
-    <Content Include="Resources\portraits\112.png" />
-    <Content Include="Resources\portraits\113.png" />
-    <Content Include="Resources\portraits\114.png" />
-    <Content Include="Resources\portraits\115.png" />
-    <Content Include="Resources\portraits\116.png" />
-    <Content Include="Resources\portraits\117.png" />
-    <Content Include="Resources\portraits\118.png" />
-    <Content Include="Resources\portraits\119.png" />
-    <Content Include="Resources\portraits\12.png" />
-    <Content Include="Resources\portraits\120.png" />
-    <Content Include="Resources\portraits\121.png" />
-    <Content Include="Resources\portraits\122.png" />
-    <Content Include="Resources\portraits\123.png" />
-    <Content Include="Resources\portraits\124.png" />
-    <Content Include="Resources\portraits\125.png" />
-    <Content Include="Resources\portraits\126.png" />
-    <Content Include="Resources\portraits\127.png" />
-    <Content Include="Resources\portraits\128.png" />
-    <Content Include="Resources\portraits\129.png" />
-    <Content Include="Resources\portraits\13.png" />
-    <Content Include="Resources\portraits\130.png" />
-    <Content Include="Resources\portraits\131.png" />
-    <Content Include="Resources\portraits\132.png" />
-    <Content Include="Resources\portraits\133.png" />
-    <Content Include="Resources\portraits\134.png" />
-    <Content Include="Resources\portraits\135.png" />
-    <Content Include="Resources\portraits\136.png" />
-    <Content Include="Resources\portraits\137.png" />
-    <Content Include="Resources\portraits\138.png" />
-    <Content Include="Resources\portraits\139.png" />
-    <Content Include="Resources\portraits\14.png" />
-    <Content Include="Resources\portraits\140.png" />
-    <Content Include="Resources\portraits\141.png" />
-    <Content Include="Resources\portraits\142.png" />
-    <Content Include="Resources\portraits\143.png" />
-    <Content Include="Resources\portraits\144.png" />
-    <Content Include="Resources\portraits\145.png" />
-    <Content Include="Resources\portraits\146.png" />
-    <Content Include="Resources\portraits\147.png" />
-    <Content Include="Resources\portraits\148.png" />
-    <Content Include="Resources\portraits\149.png" />
-    <Content Include="Resources\portraits\15.png" />
-    <Content Include="Resources\portraits\150.png" />
-    <Content Include="Resources\portraits\151.png" />
-    <Content Include="Resources\portraits\152.png" />
-    <Content Include="Resources\portraits\153.png" />
-    <Content Include="Resources\portraits\154.png" />
-    <Content Include="Resources\portraits\155.png" />
-    <Content Include="Resources\portraits\156.png" />
-    <Content Include="Resources\portraits\157.png" />
-    <Content Include="Resources\portraits\158.png" />
-    <Content Include="Resources\portraits\159.png" />
-    <Content Include="Resources\portraits\16.png" />
-    <Content Include="Resources\portraits\160.png" />
-    <Content Include="Resources\portraits\161.png" />
-    <Content Include="Resources\portraits\162.png" />
-    <Content Include="Resources\portraits\163.png" />
-    <Content Include="Resources\portraits\164.png" />
-    <Content Include="Resources\portraits\165.png" />
-    <Content Include="Resources\portraits\166.png" />
-    <Content Include="Resources\portraits\167.png" />
-    <Content Include="Resources\portraits\168.png" />
-    <Content Include="Resources\portraits\169.png" />
-    <Content Include="Resources\portraits\17.png" />
-    <Content Include="Resources\portraits\170.png" />
-    <Content Include="Resources\portraits\171.png" />
-    <Content Include="Resources\portraits\172.png" />
-    <Content Include="Resources\portraits\173.png" />
-    <Content Include="Resources\portraits\174.png" />
-    <Content Include="Resources\portraits\175.png" />
-    <Content Include="Resources\portraits\176.png" />
-    <Content Include="Resources\portraits\18.png" />
-    <Content Include="Resources\portraits\19.png" />
-    <Content Include="Resources\portraits\2.png" />
-    <Content Include="Resources\portraits\20.png" />
-    <Content Include="Resources\portraits\21.png" />
-    <Content Include="Resources\portraits\22.png" />
-    <Content Include="Resources\portraits\23.png" />
-    <Content Include="Resources\portraits\24.png" />
-    <Content Include="Resources\portraits\25.png" />
-    <Content Include="Resources\portraits\26.png" />
-    <Content Include="Resources\portraits\27.png" />
-    <Content Include="Resources\portraits\28.png" />
-    <Content Include="Resources\portraits\29.png" />
-    <Content Include="Resources\portraits\3.png" />
-    <Content Include="Resources\portraits\30.png" />
-    <Content Include="Resources\portraits\31.png" />
-    <Content Include="Resources\portraits\32.png" />
-    <Content Include="Resources\portraits\33.png" />
-    <Content Include="Resources\portraits\34.png" />
-    <Content Include="Resources\portraits\35.png" />
-    <Content Include="Resources\portraits\36.png" />
-    <Content Include="Resources\portraits\37.png" />
-    <Content Include="Resources\portraits\38.png" />
-    <Content Include="Resources\portraits\39.png" />
-    <Content Include="Resources\portraits\4.png" />
-    <Content Include="Resources\portraits\40.png" />
-    <Content Include="Resources\portraits\41.png" />
-    <Content Include="Resources\portraits\42.png" />
-    <Content Include="Resources\portraits\43.png" />
-    <Content Include="Resources\portraits\44.png" />
-    <Content Include="Resources\portraits\45.png" />
-    <Content Include="Resources\portraits\46.png" />
-    <Content Include="Resources\portraits\47.png" />
-    <Content Include="Resources\portraits\48.png" />
-    <Content Include="Resources\portraits\49.png" />
-    <Content Include="Resources\portraits\5.png" />
-    <Content Include="Resources\portraits\50.png" />
-    <Content Include="Resources\portraits\51.png" />
-    <Content Include="Resources\portraits\52.png" />
-    <Content Include="Resources\portraits\53.png" />
-    <Content Include="Resources\portraits\54.png" />
-    <Content Include="Resources\portraits\55.png" />
-    <Content Include="Resources\portraits\56.png" />
-    <Content Include="Resources\portraits\57.png" />
-    <Content Include="Resources\portraits\58.png" />
-    <Content Include="Resources\portraits\59.png" />
-    <Content Include="Resources\portraits\6.png" />
-    <Content Include="Resources\portraits\60.png" />
-    <Content Include="Resources\portraits\61.png" />
-    <Content Include="Resources\portraits\62.png" />
-    <Content Include="Resources\portraits\63.png" />
-    <Content Include="Resources\portraits\64.png" />
-    <Content Include="Resources\portraits\65.png" />
-    <Content Include="Resources\portraits\66.png" />
-    <Content Include="Resources\portraits\67.png" />
-    <Content Include="Resources\portraits\68.png" />
-    <Content Include="Resources\portraits\69.png" />
-    <Content Include="Resources\portraits\7.png" />
-    <Content Include="Resources\portraits\70.png" />
-    <Content Include="Resources\portraits\71.png" />
-    <Content Include="Resources\portraits\72.png" />
-    <Content Include="Resources\portraits\73.png" />
-    <Content Include="Resources\portraits\74.png" />
-    <Content Include="Resources\portraits\75.png" />
-    <Content Include="Resources\portraits\76.png" />
-    <Content Include="Resources\portraits\77.png" />
-    <Content Include="Resources\portraits\78.png" />
-    <Content Include="Resources\portraits\79.png" />
-    <Content Include="Resources\portraits\8.png" />
-    <Content Include="Resources\portraits\80.png" />
-    <Content Include="Resources\portraits\81.png" />
-    <Content Include="Resources\portraits\82.png" />
-    <Content Include="Resources\portraits\83.png" />
-    <Content Include="Resources\portraits\84.png" />
-    <Content Include="Resources\portraits\85.png" />
-    <Content Include="Resources\portraits\86.png" />
-    <Content Include="Resources\portraits\87.png" />
-    <Content Include="Resources\portraits\88.png" />
-    <Content Include="Resources\portraits\89.png" />
-    <Content Include="Resources\portraits\9.png" />
-    <Content Include="Resources\portraits\90.png" />
-    <Content Include="Resources\portraits\91.png" />
-    <Content Include="Resources\portraits\92.png" />
-    <Content Include="Resources\portraits\93.png" />
-    <Content Include="Resources\portraits\94.png" />
-    <Content Include="Resources\portraits\95.png" />
-    <Content Include="Resources\portraits\96.png" />
-    <Content Include="Resources\portraits\97.png" />
-    <Content Include="Resources\portraits\98.png" />
-    <Content Include="Resources\portraits\99.png" />
+    <None Include="Resources\Monster_BG.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

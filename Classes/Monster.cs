@@ -77,12 +77,23 @@ namespace FKSE
 
         public void Write()
         {
-            // TODO: Finish this method
             byte Flag_Data = Character_Slot;
             for (int i = 0; i < 4; i++)
                 Save.SetBit(ref Flag_Data, i + 4, Flags[i]);
-            //MessageBox.Show("Flag_Data: " + Flag_Data.ToString("X"));
+
             Save_File_Reference.Write(Monster_Offset, Flag_Data);
+            Save_File_Reference.Write(Monster_Offset + 1, Action_Points);
+            Save_File_Reference.Write(Monster_Offset + 2, UNKNOWN);
+            Save_File_Reference.Write(Monster_Offset + 3, (byte)(Orb_RGB >> 16));
+            Save_File_Reference.Write(Monster_Offset + 4, (byte)(Orb_RGB >> 8));
+            Save_File_Reference.Write(Monster_Offset + 5, (byte)Orb_RGB);
+            Save_File_Reference.Write(Monster_Offset + 6, Max_HP, true);
+            Save_File_Reference.Write(Monster_Offset + 8, Base_Attack, true);
+            Save_File_Reference.Write(Monster_Offset + 0xA, Base_Defense, true);
+            Save_File_Reference.Write(Monster_Offset + 0xC, EXP, true);
+
+            for (int i = 0; i < 3; i++)
+                Save_File_Reference.Write(Monster_Offset + 0xE + i * 2, new byte[2] { Items[i].Item_ID, Items[i].Quantity });
         }
     }
 }
