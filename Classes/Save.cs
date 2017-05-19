@@ -167,16 +167,15 @@ namespace FKSE
             }
             else
             {
-                dynamic Data_Array = data;
                 if (Data_Type == typeof(byte[]))
-                    for (int i = 0; i < Data_Array.Length; i++)
-                        Working_Save_Data[offset + i] = Data_Array[i];
+                    for (int i = 0; i < data.Length; i++)
+                        Working_Save_Data[offset + i] = data[i];
                 else
                 {
-                    int Data_Size = Marshal.SizeOf(Data_Array[0]);
-                    for (int i = 0; i < Data_Array.Length; i++)
+                    int Data_Size = Marshal.SizeOf(data[0]);
+                    for (int i = 0; i < data.Length; i++)
                     {
-                        byte[] Byte_Array = BitConverter.GetBytes(Data_Array[i]);
+                        byte[] Byte_Array = BitConverter.GetBytes(data[i]);
                         if (reversed)
                             Array.Reverse(Byte_Array);
                         Byte_Array.CopyTo(Working_Save_Data, offset + i * Data_Size);
