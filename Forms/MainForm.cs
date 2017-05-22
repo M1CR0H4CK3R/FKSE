@@ -195,9 +195,9 @@ namespace FKSE
                 monsterEXP.Text = Clicked_Monster.EXP.ToString();
                 monsterOwned.Checked = Clicked_Monster.Flags[2];
                 monsterAssignable.Checked = Clicked_Monster.Flags[3];
-                monsterRed.Value = (byte)(Clicked_Monster.Orb_RGB >> 16);
-                monsterGreen.Value = (byte)(Clicked_Monster.Orb_RGB >> 8);
-                monsterBlue.Value = (byte)(Clicked_Monster.Orb_RGB);
+                monsterRed.Value = Clicked_Monster.Orb_Red;
+                monsterGreen.Value = Clicked_Monster.Orb_Green;
+                monsterBlue.Value = Clicked_Monster.Orb_Blue;
                 redBox.Text = monsterRed.Value.ToString();
                 greenBox.Text = monsterGreen.Value.ToString();
                 blueBox.Text = monsterBlue.Value.ToString();
@@ -208,7 +208,7 @@ namespace FKSE
                     Monster_Item_TextBoxes[i].Text = Clicked_Monster.Items[i].Quantity.ToString();
                 }
 
-                monsterRGBPreview.BackColor = Color.FromArgb((int)Current_Monster.Orb_RGB);
+                monsterRGBPreview.BackColor = Color.FromArgb((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
             }
         }
 
@@ -416,11 +416,9 @@ namespace FKSE
         {
             if (Save_File != null && Current_Monster != null)
             {
-                MessageBox.Show("Original RGB: " + Current_Monster.Orb_RGB.ToString("X"));
-                Current_Monster.Orb_RGB = (uint)((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
-                MessageBox.Show("New RGB: " + Current_Monster.Orb_RGB.ToString("X"));
+                Current_Monster.Orb_Red = (byte)(monsterRed.Value);
                 redBox.Text = monsterRed.Value.ToString();
-                monsterRGBPreview.BackColor = Color.FromArgb((int)Current_Monster.Orb_RGB);
+                monsterRGBPreview.BackColor = Color.FromArgb((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
             }
         }
 
@@ -428,9 +426,9 @@ namespace FKSE
         {
             if (Save_File != null && Current_Monster != null)
             {
-                Current_Monster.Orb_RGB = (uint)((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
+                Current_Monster.Orb_Green = (byte)(monsterGreen.Value);
                 greenBox.Text = monsterGreen.Value.ToString();
-                monsterRGBPreview.BackColor = Color.FromArgb((int)Current_Monster.Orb_RGB);
+                monsterRGBPreview.BackColor = Color.FromArgb((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
             }
         }
 
@@ -438,9 +436,9 @@ namespace FKSE
         {
             if (Save_File != null && Current_Monster != null)
             {
-                Current_Monster.Orb_RGB = (uint)((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
+                Current_Monster.Orb_Blue = (byte)(monsterBlue.Value);
                 blueBox.Text = monsterBlue.Value.ToString();
-                monsterRGBPreview.BackColor = Color.FromArgb((int)Current_Monster.Orb_RGB);
+                monsterRGBPreview.BackColor = Color.FromArgb((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
             }
         }
 
@@ -449,6 +447,7 @@ namespace FKSE
             if (Save_File != null && Current_Monster != null && byte.TryParse(redBox.Text, out byte Red))
             {
                 monsterRed.Value = Red;
+                monsterRGBPreview.BackColor = Color.FromArgb((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
             }
             else
             {
@@ -461,6 +460,7 @@ namespace FKSE
             if (Save_File != null && Current_Monster != null && byte.TryParse(greenBox.Text, out byte Green))
             {
                 monsterGreen.Value = Green;
+                monsterRGBPreview.BackColor = Color.FromArgb((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
             }
             else
             {
@@ -473,6 +473,7 @@ namespace FKSE
             if (Save_File != null && Current_Monster != null && byte.TryParse(blueBox.Text, out byte Blue))
             {
                 monsterBlue.Value = Blue;
+                monsterRGBPreview.BackColor = Color.FromArgb((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
             }
             else
             {

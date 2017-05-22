@@ -28,7 +28,9 @@ namespace FKSE
         public byte Character_Slot; // Lower Nibble of first byte
         public byte Action_Points;
         public byte UNKNOWN; // Figure out what this is
-        public uint Orb_RGB;
+        public byte Orb_Red;
+        public byte Orb_Green;
+        public byte Orb_Blue;
         public ushort Max_HP;
         public ushort Base_Attack;
         public ushort Base_Defense;
@@ -44,7 +46,9 @@ namespace FKSE
             Character_Slot = 0;
             Action_Points = 0;
             UNKNOWN = 0;
-            Orb_RGB = 0x00FFFFFF;
+            Orb_Red = 0;
+            Orb_Green = 0;
+            Orb_Blue = 0;
             Max_HP = 0;
             Base_Attack = 0;
             Base_Attack = 0;
@@ -65,7 +69,9 @@ namespace FKSE
             Character_Slot = (byte)(monsterData[0] & 0xF); // Lower nibble is reserved for the character slot of the monster
             Action_Points = monsterData[1];
             UNKNOWN = monsterData[2];
-            Orb_RGB = (uint)((0xFF << 24) + (monsterData[5] << 16) + (monsterData[4] << 8) + monsterData[3]);
+            Orb_Red = monsterData[3];
+            Orb_Green = monsterData[4];
+            Orb_Blue = monsterData[5];
             Max_HP = (ushort)((monsterData[6] << 8) + monsterData[7]);
             Base_Attack = (ushort)((monsterData[8] << 8) + monsterData[9]);
             Base_Defense = (ushort)((monsterData[0xA] << 8) + monsterData[0xB]);
@@ -84,9 +90,9 @@ namespace FKSE
             Save_File_Reference.Write(Monster_Offset, Flag_Data);
             Save_File_Reference.Write(Monster_Offset + 1, Action_Points);
             Save_File_Reference.Write(Monster_Offset + 2, UNKNOWN);
-            Save_File_Reference.Write(Monster_Offset + 3, (byte)(Orb_RGB));
-            Save_File_Reference.Write(Monster_Offset + 4, (byte)(Orb_RGB >> 8));
-            Save_File_Reference.Write(Monster_Offset + 5, (byte)(Orb_RGB >> 16));
+            Save_File_Reference.Write(Monster_Offset + 3, Orb_Red);
+            Save_File_Reference.Write(Monster_Offset + 4, Orb_Green);
+            Save_File_Reference.Write(Monster_Offset + 5, Orb_Blue);
             Save_File_Reference.Write(Monster_Offset + 6, Max_HP, true);
             Save_File_Reference.Write(Monster_Offset + 8, Base_Attack, true);
             Save_File_Reference.Write(Monster_Offset + 0xA, Base_Defense, true);
