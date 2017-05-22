@@ -36,6 +36,7 @@ namespace FKSE
         private Save Save_File;
         private Item[] Items = new Item[512];
         private Monster[] Monsters = new Monster[177];
+        private Character[][] Characters = new Character[3][];
         private string[] Item_Database = Save.LoadItemDatabase().ToArray();
         private string[] Monster_Database = Save.LoadMonsterDatabase().ToArray();
         private ComboBox[] Item_ComboBoxes = new ComboBox[64];
@@ -194,6 +195,12 @@ namespace FKSE
                 monsterEXP.Text = Clicked_Monster.EXP.ToString();
                 monsterOwned.Checked = Clicked_Monster.Flags[2];
                 monsterAssignable.Checked = Clicked_Monster.Flags[3];
+                monsterRed.Value = (byte)(Clicked_Monster.Orb_RGB >> 16);
+                monsterGreen.Value = (byte)(Clicked_Monster.Orb_RGB >> 8);
+                monsterBlue.Value = (byte)(Clicked_Monster.Orb_RGB);
+                redBox.Text = monsterRed.Value.ToString();
+                greenBox.Text = monsterGreen.Value.ToString();
+                blueBox.Text = monsterBlue.Value.ToString();
 
                 for (int i = 0; i < 3; i++)
                 {
@@ -201,6 +208,7 @@ namespace FKSE
                     Monster_Item_TextBoxes[i].Text = Clicked_Monster.Items[i].Quantity.ToString();
                 }
 
+                monsterRGBPreview.BackColor = Color.FromArgb((int)Current_Monster.Orb_RGB);
             }
         }
 
@@ -254,6 +262,16 @@ namespace FKSE
                 // Monster Loading
                 for (int i = 0; i < 177; i++)
                     Monsters[i] = new Monster(Save_File.Save_Data_Start_Offset + MonsterData_Offset + i * 0x14, Save_File);
+
+                // Character Loading (i == 0 is Yugi, i == 1 is Kaiba, i == 2 is Joey)
+                for (int i = 0; i < 3; i++)
+                {
+                    Characters[i] = new Character[8];
+                    for (int c = 0; c < 8; c++)
+                    {
+                        Characters[i][c] = new Character(Save_File, Save_File.Save_Data_Start_Offset + CharacterData_Offset + i * 0x50 + c * 0x8);
+                    }
+                }
             }
         }
 
@@ -392,6 +410,74 @@ namespace FKSE
         {
             if (Current_Monster != null)
                 Current_Monster.Flags[3] = monsterAssignable.Checked;
+        }
+
+        private void monsterRed_Scroll(object sender, EventArgs e)
+        {
+            if (Save_File != null && Current_Monster != null)
+            {
+                MessageBox.Show("Original RGB: " + Current_Monster.Orb_RGB.ToString("X"));
+                Current_Monster.Orb_RGB = (uint)((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
+                MessageBox.Show("New RGB: " + Current_Monster.Orb_RGB.ToString("X"));
+                redBox.Text = monsterRed.Value.ToString();
+                monsterRGBPreview.BackColor = Color.FromArgb((int)Current_Monster.Orb_RGB);
+            }
+        }
+
+        private void monsterGreen_Scroll(object sender, EventArgs e)
+        {
+            if (Save_File != null && Current_Monster != null)
+            {
+                Current_Monster.Orb_RGB = (uint)((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
+                greenBox.Text = monsterGreen.Value.ToString();
+                monsterRGBPreview.BackColor = Color.FromArgb((int)Current_Monster.Orb_RGB);
+            }
+        }
+
+        private void monsterBlue_Scroll(object sender, EventArgs e)
+        {
+            if (Save_File != null && Current_Monster != null)
+            {
+                Current_Monster.Orb_RGB = (uint)((0xFF << 24) + (monsterRed.Value << 16) + (monsterGreen.Value << 8) + (monsterBlue.Value));
+                blueBox.Text = monsterBlue.Value.ToString();
+                monsterRGBPreview.BackColor = Color.FromArgb((int)Current_Monster.Orb_RGB);
+            }
+        }
+
+        private void redBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Save_File != null && Current_Monster != null && byte.TryParse(redBox.Text, out byte Red))
+            {
+                monsterRed.Value = Red;
+            }
+            else
+            {
+                redBox.Text = monsterRed.Value.ToString();
+            }
+        }
+
+        private void greenBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Save_File != null && Current_Monster != null && byte.TryParse(greenBox.Text, out byte Green))
+            {
+                monsterGreen.Value = Green;
+            }
+            else
+            {
+                greenBox.Text = monsterGreen.Value.ToString();
+            }
+        }
+
+        private void blueBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Save_File != null && Current_Monster != null && byte.TryParse(blueBox.Text, out byte Blue))
+            {
+                monsterBlue.Value = Blue;
+            }
+            else
+            {
+                blueBox.Text = monsterBlue.Value.ToString();
+            }
         }
     }
 }
