@@ -1,26 +1,15 @@
 # FKSE
 FKSE - A Save Editor for the Nintendo GameCube game Yu-Gi-Oh! The Falsebound Kingdom written in C#.
 
-Planned features:
+Current features:
 
 Money editing
+* Items editing
+* Monster editing
+* Checksum recalculation
+* Planned features:
+* Character editing
 
-Items editing
+Some code was initially taken from <a href="https://github.com/Cuyler36/ACSE">ACSE</a> by <a href="https://github.com/Cuyler36">Cuyler36</a> and adapted to Yu-Gi-Oh! The Falsebound Kingdom. Since then, <a href="https://github.com/Cuyler36">Cuyler36</a> has been working on the coding aspect, while I have done all of the documentation on the save file. As things are now, a release should come really shortly, but if you want to build it yourself, you'll need Visual Studio Community 2017, then building should be self-explanatory after that.
 
-Monster stats editing
-
-Character stats editing
-
-Checksum recalculation
-
-Some code was taken from <a href="https://github.com/Cuyler36/ACSE">ACSE</a> by <a href="https://github.com/Cuyler36">Cuyler36</a> and
-adapted to Yu-Gi-Oh! The Falsebound Kingdom.
-
-This is a work in progress, but since I got one of the files rewritten already, and got permission from <a href="https://github.com/Cuyler36">Cuyler36</a>, I decided
-to publish what I have so far.
-
-This is my first ever real attempt at coding an application in ANY programming language whatsoever, so if anyone wants to
-help by notifying me of any mistakes I may make, it would be appreciated. I also plan to document the save file structure and
-checksum algorithm in the Wiki section really soon, and if anyone wants to implement the checksum calculation for me, that
-would also be appreciated.
-
+Although we couldn't have made it this far without each other, I think that credit for the editor should go first and foremost to <a href="https://github.com/Cuyler36">Cuyler36</a>, with me being credited for the documentation, even though this Editor was my idea.
